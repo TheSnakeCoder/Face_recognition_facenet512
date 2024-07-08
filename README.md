@@ -43,7 +43,7 @@ This script performs real-time face recognition on a video feed using precompute
 Clone the repository
 
 ```bash
-git clone https://github.com/your_username/your_repository.git
+git clone https://github.com/TheSnakeCoder/Face_recognition_facenet512.git
 cd Face_recognition_facenet512.git
 pip install -r requirements.txt
 ```
