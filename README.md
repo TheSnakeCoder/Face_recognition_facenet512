@@ -48,3 +48,7 @@ cd Face_recognition_facenet512.git
 pip install -r requirements.txt
 ```
 
+* Create a directory "data" where you can store images of people you want to recognize (make sure the faces are well visible and are looking at the camera.  If the faces captured are bad qualities this could affect the model performence)
+* run the `crop_face.py` to crop the faces we want to recognize
+* run the `extract_embs.py` to extract the embeddings of the cropped faces
+* run the `face_recognition.py`
