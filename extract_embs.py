@@ -15,6 +15,8 @@ def clahe(image):
 
 
 def extract_embedding(input_dir, output_dir, emb_file, norm_dir, model_name=model_name):
+    os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(norm_dir, exist_ok=True)
     try:
         # Load existing embeddings (if any)
         with open(f"./{output_dir}/{emb_file}", "rb") as file:

@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 
 
 def crop(input_dir, output_dir, detector_backend="yolov8"):
+    # Create output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
 
     for img_file in tqdm(os.listdir(input_dir)):
         img_path = os.path.join(input_dir, img_file)
@@ -21,9 +23,7 @@ def crop(input_dir, output_dir, detector_backend="yolov8"):
         
         face = cv2.cvtColor(face, cv2.COLOR_GRAY2RGB)
         face = cv2.resize(face, (224, 224))
-        # print(face.shape)
-        plt.imsave(f"./{output_dir}/{img_name}.jpg", face)
+        plt.imsave(f"{output_dir}/{img_name}.jpg", face)
 
 
 crop("./data", "./cropped_faces")
-# crop('./data', './cropped_faces_color')
